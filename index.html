@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="rt.css">
+    <link rel="stylesheet" href="rtpage1menu.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="a1.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* min-height: 100vh; */
+        /* overflow: hidden; */
+        overflow:visible;
+    }
+
+    .scene {
+        position: fixed;
+        top:0px;
+        left:0px;
+        z-index: 10000;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        /* overflow: hidden; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .scene i {
+        position: absolute;
+        top: -250px;
+        background: rgb(70, 65, 65);
+        animation: animatestars linear infinite;
+    }
+
+    @keyframes animatestars {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(100vh);
+        }
+    }
+
+    .scene .rocket {
+        /* position: relative; */
+        animation: animate 0.2s ease infinite;
+        /* margin-right: 400px; */
+        
+       
+
+    }
+    .rocket{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:40vh;
+        width:40vw;
+        overflow: hidden;
+        
+    }
+    .rocket img{
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 90%;
+    }
+   
+    
+  
+
+    @keyframes animate {
+
+        0%,
+        100% {
+            transform: translateY(-2px);
+        }
+
+        50% {
+            transform: translateY(2px);
+        }
+    }
+
+   
+
+    .disappear {
+        animation: vanish 2s forwards;
+
+    }
+
+    @keyframes vanish {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+            margin-bottom: 100%;
+            display: none;
+        }
+    }
+    #text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+   
+    </style>
+</head>
+
+<body>
+
+
+    
+        <div class="navigation">
+            <div class="logo"><img src="rtlogo1.png" width= 100px></div>
+            <ul> 
+                <li class="menu10">
+                    <a href="index.html">Home </a>
+                </li>
+                <li class="dropdown menu10">
+                    <a class="dropbtn" href="Untitled-1.html">TEAM</a>
+                    
+                    <div class="dropdown-content">
+                            <a href="Untitled-1.html#prop">Propulsion <i class="fa-solid fa-wind"></i></a>
+                            <a href="Untitled-1.html#avio">Avionics <i class="fa-solid fa-screwdriver-wrench"></i></a>
+                            <a href="Untitled-1.html#reco">Recovery <i class="fa-solid fa-parachute-box"></i></a>
+                            <a href="Untitled-1.html#airf">Airframe <i class="fa-solid fa-rocket"></i></a>
+                            <a href="Untitled-1.html#busi">Business <i class="fa-solid fa-handshake"></i></a>
+                    </div>
+                </li>
+                <li class="menu10"><a href="gallery.html">Gallery</a></li>
+                <li class="menu10"><a href="trial.html">Subsystems</a></li>
+                <li class="menu10"><a href="faq.html">FAQs</a></li>
+                <li class="menu10"><a href="contact.html">Contact Us</a></li>
+                
+                <li id="fa-fa">
+                    <a href="#" class="menu2"><i class="fa fa-bars"></i></a>
+                    <div class="menu1">
+                        <a href="index.html">HOME</a>
+                        <a href="Untitled-1.html">TEAM</a>
+                        <a href="gallery.html">GALLERY</a>
+                        <a href="trial.html">SUBSYSTEMS</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="contact.html">CONTACT-US</a>
+                    </div>
+                </li>
+                
+            </ul>    
+        </div>
+       
+         <div class="bro"> 
+            <section id="text" >
+                    <h1 >IIT BOMBAY</h1>
+                    <h1>ROCKET TEAM</h1>
+                    <h3 class="tagline">ACHIEVING NEW FRONTIERS IN </h3>
+                    <h3 >HIGH-POWERED ROCKETRY</h3>     
+            </section>
+        </div>  
+    
+
+    <!--<div class="container-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, 
+        animi? Illo optio nihil distinctio placeat fugiat repellat tempora, earum doloremque 
+        laudantium quae voluptatibus perspiciatis quam libero quia sint? Corrupti molestiae nulla, 
+        odit fugit itaque tempore necessitatibus ea architecto iure assumenda, expedita eligendi tenetur 
+        nostrum, officiis sapiente. Quas reprehenderit quisquam sed tempora dolor fugit omnis eius non quidem, 
+        numquam eum veritatis a nihil excepturi accusamus eaque eos iusto illo, ullam magni blanditiis ratione, 
+        rerum doloremque iure! Debitis ullam totam quasi. In, amet cumque neque non similique veniam cum quae 
+        sequi officiis vero illum quidem ullam. Optio nihil eius rerum? Nihil, ex.</div>
+    <div class="container-2">
+         <div class="left-container">
+            <img src="rocket12.jpeg" alt="" class="rocket rocket1">
+            <img src="rocket22.jpeg" alt="" class="rocket rocket2">
+        </div> -->
+        <div class="right-container">
+               
+                <div class="about-us-container">
+                    <div class="about-us-heading" data-aos="slide-down" >
+                        ABOUT US
+                    </div>
+                    <div class="about-us-text" data-aos="zoom-in">
+                        We, the Rocket Team, are India's First INSPACe and PMO recognized rocket team of 50+ rocket enthusiasts from across different specialties wanting to advance the rocketry community with technological innovations. The team's mission is to revolutionize the field of rocket engineering in India and promote the field among students of all learning levels.
+                    </div>
+                </div>
+            
+            
+                <div class="vision-container" >
+                    
+                    <div class="vision-heading" data-aos="slide-down">
+                        VISION
+                    </div>
+                    <div class="vision-text" data-aos="zoom-in">
+                        The Rocket Team aims to represent IITB in the world's largest competitive event to showcase rocketry skills, Spaceport America Cup (SAC) 2023, the flagship event of IREC, the Intercollegiate Rocket Engineering Competition. On this platform, we will launch our most-awaited, ADYANT.
+                    </div>
+                
+                </div>
+            
+        </div>
+    </div>
+    <!--<div class="container-3"></div>-->
+
+    <!--<div class="rocket-model">
+        <img src="rocket2.jpeg" alt="This is rocket model" width="30%">
+    </div>-->
+    
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+             <div class="footer-col">
+                 <h4>ADDRESS</h4>
+                 <p>IITB Rocket Team Lab, Basement, Aero Annex Building, Academic Area, IIT Bombay, Powai, Mumbai, 400076</p>
+             </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                     <li><a href="Untitled-1.html">TEAM</a></li>
+                     <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SUBSYSTEMS</h4>
+                    <ul>
+                        <li><a href="Untitled-1.html#prop">PROPULSION</a></li>
+                        <li><a href="Untitled-1.html#avio">AVIONICS</a></li>
+                        <li><a href="Untitled-1.html#reco">RECOVERY</a></li>
+                        <li><a href="Untitled-1.html#airf">AIRFRAME</a></li>
+                       <li><a href="Untitled-1.html#busi">BUSINESS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/iitbrocketteam" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
+                        <a href="https://www.instagram.com/iitb.rocket.team/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/iitb-rocket-team/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:iitbrocketteam@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <div class="CopyRightText">
+     <p>&copy; IITB Rocket Web Team 2022</p>
+ </div>
+ <div class="scene">
+    <div class="rocket">
+        <img src="rocketloader2.png" alt="error loading image">
+    </div>
+</div>
+<script>
+    function stars() {
+        let count = 100;
+        let scene = document.querySelector('.scene');
+        let i = 0;
+        while (i < count) {
+            let star = document.createElement('i');
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let duration = Math.random() * 1;
+            let h = Math.random() * 50;
+            star.style.left = x + 'px';
+            star.style.width = 1 + 'px';
+            star.style.height = h + 'px';
+            star.style.width = 2 + 'px';
+            star.style.animationDuration = duration + 's';
+
+            scene.appendChild(star);
+            i++
+        }
+    }
+    stars();
+
+
+</script>
+<script>
+    var loader = document.querySelector(".scene")
+    var rocket = document.querySelector(".rocket")
+    var body = document.querySelector("body")
+    var saale=document.querySelector(".saale")
+   
+
+
+    window.addEventListener("load", vanish);
+    function vanish() {
+        loader.classList.add("disappear");
+        body.style.overflow = "visible";
+        body.style.display = "block";
+        saale.style.display="block";
+        body.style.minHeight="none";
+        body.style.lineHeight = "1.5";
+        body.style.overflowX = "hidden";
+       
+
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+   AOS.init();
+ </script>
+ 
+</body>
+
+</html>

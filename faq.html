@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <!-- <link rel="stylesheet" href="menu1.css"> -->
+    <link rel="stylesheet" href="rt.css">
+    <link rel="stylesheet" href="rtpage1menu.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding:0px;
+        font-family: "Poppins";
+
+    }
+
+    body {
+        font-family: 'Muli', sans-serif;
+        background-color: black;
+        background-attachment: fixed;
+    }
+
+    h1 {
+        /* margin: 50px 0 30px; */
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .faq-container {
+        max-width: 600px;
+        margin: 0 auto;
+        display: table;
+        height: 1320px;
+        width:100vw;
+       
+    }
+
+    .faq {
+        background-color: white;
+        border: 1px solid #c1c4c7;
+        margin: 20px 0;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s ease;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .faq.active {
+        background-color: rgb(220, 214, 226);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* .faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+} */
+
+    .faq.active::before {
+        color: #3498db;
+        top: -10px;
+        left: -30px;
+        transform: rotateY(180deg);
+    }
+
+    .faq-title {
+        margin: 0 35px 0 0;
+        font-family: "League Spartan";
+    }
+
+    .faq-text {
+        display: none;
+        margin: 30px 0 0;
+        font-family: "League Spartan";
+    }
+    .faqhead{
+        font-family: "League Spartan";
+    }
+
+    .faq.active .faq-text {
+        display: block;
+    }
+
+    .faq-toggle {
+        background-color: #2596be;
+        border: 0;
+        border-radius: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        padding: 0;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .faq-toggle:focus {
+        outline: 0;
+    }
+
+    .faq-toggle .fa-times {
+        display: none;
+    }
+
+    .faq.active .faq-toggle .fa-times {
+        color: #222;
+        display: block;
+    }
+
+    .faq.active .faq-toggle .fa-chevron-down {
+        display: none;
+    }
+     #faqbac{
+       
+        height:100%;
+        width:100%;
+    } 
+    @media screen and (max-width: 700px){
+      
+  
+  
+  
+      #fa-fa{
+          
+          transform: translateX(-10px);
+        
+      }
+  
+    
+    
+  }
+</style>
+
+<body>
+
+    <div class="wrapper saale">
+        <div class="navigation">
+            <div class="logo"><img src="rtlogo1.png" width=100px></div>
+            <ul>
+                <li class="menu10">
+                    <a href="index.html">Home </a>
+                </li>
+                <li class="menu10"><a href="faq.html">FAQs</a></li>
+
+                <li class="menu10"><a href="gallery.html">Gallery</a></li>
+                <li class="menu10"><a href="trial.html">Subsystems</a></li>
+                <li class="dropdown menu10">
+                    <a class="dropbtn" href="Untitled-1.html">TEAM</a>
+
+                    <div class="dropdown-content">
+                        <a href="Untitled-1.html#prop">Propulsion <i class="fa-solid fa-wind"></i></a>
+                        <a href="Untitled-1.html#avio">Avionics <i class="fa-solid fa-screwdriver-wrench"></i></a>
+                        <a href="Untitled-1.html#reco">Recovery <i class="fa-solid fa-parachute-box"></i></a>
+                        <a href="Untitled-1.html#airf">Airframe <i class="fa-solid fa-rocket"></i></a>
+                        <a href="Untitled-1.html#busi">Business <i class="fa-solid fa-handshake"></i></a>
+                    </div>
+                </li>
+                <li class="menu10"><a href="contact.html">Contact Us</a></li>
+
+                <li id="fa-fa">
+                    <a href="#" class="menu2"><i class="fa fa-bars"></i></a>
+                    <div class="menu1">
+                        <a href="index.html">HOME</a>
+                        <a href="Untitled-1.html">TEAM</a>
+                        <a href="gallery.html">GALLERY</a>
+                        <a href="trial.html">SUBSYSTEMS</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="contact.html">CONTACT-US</a>
+                    </div>
+                </li>
+
+            </ul>
+
+
+        </div>
+
+    </div>
+    <div id="faqbac">
+
+        <h1 class="faqhead">Frequently Asked Questions</h1>
+
+        <div class="faq-container">
+            <div class="faq " data-tilt data-aos="slide-left" data-aos-duration="5000" data-aos-offset="200"
+                data-aos-delay="5000">
+                <h3 class="faq-title">
+                    What is the Spaceport America Cup?
+
+                </h3>
+
+                <p class="faq-text">
+                    The Spaceport America Cup is the world's largest intercollegiate rocketry challenge formulated in
+                    conjunction with ESRA- Experimental Sounding Rocket Association which is scheduled to be held in
+                    June 2023 New Mexico, USA this year
+                </p>
+
+                <button class="faq-toggle">
+                    <ion-icon class="fa-chevron-down" name="add-outline"></ion-icon>
+                    <ion-icon class="fa-times" name="close-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div class="faq" data-tilt data-aos="slide-right">
+                <h3 class="faq-title">
+                    What is Adyant?
+
+                </h3>
+                <p class="faq-text">
+                    Our first rocket is named "Adyant"- a design currently in progress. It is classified as a high power
+                    solid propellant rocket capable of carrying a 5 kg payload to a target altitude of 10,000 ft using
+                    commerical of the shelf (COTS) solid motor.
+
+                </p>
+                <button class="faq-toggle">
+                    <ion-icon class="fa-chevron-down" name="add-outline"></ion-icon>
+                    <ion-icon class="fa-times" name="close-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div class="faq" data-tilt data-tilt data-aos="slide-left">
+                <h3 class="faq-title">
+                    What is the target altitude and top speed of adyant?
+
+                </h3>
+                <p class="faq-text">
+                    The flight mission is to reach an altitude of 10,000 ft above ground level . It's speed exceeds Mach
+                    1.1
+
+                </p>
+                <button class="faq-toggle">
+                    <ion-icon class="fa-chevron-down" name="add-outline"></ion-icon>
+                    <ion-icon class="fa-times" name="close-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div class="faq" data-tilt data-tilt data-aos="slide-right">
+                <h3 class="faq-title">
+                    Who can be a part of the team?
+
+                </h3>
+                <p class="faq-text">
+                    Any IITB student, be it a fresher or a PhD scholar, can be a part of the team. The team also has
+                    experienced faculty advisors and mentors from ISRO
+
+                </p>
+                <button class="faq-toggle">
+                    <ion-icon class="fa-chevron-down" name="add-outline"></ion-icon>
+                    <ion-icon class="fa-times" name="close-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div class="faq" data-tilt data-tilt data-aos="slide-left">
+                <h3 class="faq-title">
+                    What is the rocket made of?
+
+                </h3>
+                <p class="faq-text">
+                    The rocket's airframe will be composed of fiber glass. For our first stint at the competition, we
+                    are only allowed to go with conventional approaches like using the commercially available solid
+                    rocket motor, given the high risks associated with building and launching rockets
+
+                </p>
+                <button class="faq-toggle">
+                    <ion-icon class="fa-chevron-down" name="add-outline"></ion-icon>
+                    <ion-icon class="fa-times" name="close-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="faq" data-tilt data-tilt data-aos="slide-right">
+                <h3 class="faq-title">
+                    What will be the Rocket's specifications?
+
+
+                </h3>
+                <p class="faq-text">
+                    The rocket will be 220 cm long with a diameter of 15cm and weighing 23723 grams
+
+                </p>
+                <button class="faq-toggle">
+                    <ion-icon class="fa-chevron-down" name="add-outline"></ion-icon>
+                    <ion-icon class="fa-times" name="close-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // - Bring in toggle buttons (querySelectorAll)
+        // - Loop through nodelist (forEach)
+        // - Add click event (addEVENTListener)
+        // - Toggle the active class on the parent node (.parentNode & classList.toggle())
+
+
+        const toggles = document.querySelectorAll('.faq-toggle');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                toggle.parentNode.classList.toggle('active');
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="vanilla.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".your-element"), {
+            max: 25,
+            speed: 400
+        });
+
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#faqbac",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x1d3c54
+        })
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: -200,
+            // delay: 2000, // values from 0 to 3000, with step 50ms
+            duration: 3000, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: true // whether animation should happen only once - while scrolling down
+        });
+    </script>
+</body>
+
+</html>

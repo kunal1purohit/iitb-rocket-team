@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+
+<head>
+
+  <title>Team Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/6830540bef.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="menu1.css">
+  <link rel="stylesheet" href="rt.css">
+  <link rel="stylesheet" href="rtpage1menu.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script type="text/javascript" src="portfolio.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+  * {
+    padding: 0px;
+    margin: 0px;
+    /* font-family: 'League Spartan', sans-serif; */
+    scroll-behavior: smooth;
+   
+  }
+
+  .intro {
+    font-weight: bolder;
+    font-size: 120px;
+    color: black;
+    font-weight: 900;
+    padding-top: 80px;
+    text-align: center;
+
+
+  }
+
+  .intro {
+    font-size: 70px;
+  }
+
+  .about {
+    width: 90%;
+    margin: auto;
+    font-weight: 100;
+    font-size: 28px;
+
+    font-family: 'Poppins', sans-serif;
+
+    padding-left: 00px;
+    padding-right: 00px;
+    color: black;
+
+    text-align: center;
+
+  }
+
+  .about a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .about a:hover {
+    color: grey;
+  }
+
+  .top {
+    padding-top: 200px;
+    background-image: url("teamb1.png");
+    background-color: rgb(0, 0, 0);
+    min-height: 750px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .propulsion {
+    /* border:2px solid red; */
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .avionics {
+    /* border:2px solid red; */
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  h1 {
+
+    color: white;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  hr {
+    height: 2px;
+    background-color: rgb(16, 136, 228);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .lead {
+    /* border: 2px solid cyan; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+
+  }
+
+  .lead div {
+    margin-top: 20px;
+    
+  }
+
+  .lead div div {
+    height: 250px;
+    width: 250px;
+    /* border:2px solid yellow; */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .lead div div:hover {
+    transform: scale(1.1);
+    box-shadow: -4px -4px 6px rgb(16, 136, 228);
+
+  }
+
+
+
+  .lead div div img {
+    width: 100%;
+    /* or any custom size */
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .lead div p {
+    color: white;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .lead a {
+    color: white;
+  }
+
+  .member {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+
+  }
+
+  .member div {
+    margin-top: 20px;
+    
+  }
+
+  .member div div {
+    height: 250px;
+    width: 250px;
+    /* border:2px solid yellow; */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .member div div:hover {
+    transform: scale(1.1);
+    box-shadow: -4px -4px 6px rgb(16, 136, 228);
+  }
+
+  .member div div img {
+    width: 100%;
+    /* or any custom size */
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .member div p {
+    color: white;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+  }
+
+  .member a {
+    color: white;
+  }
+
+  .busi {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .prop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .avio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  #rocketb {
+    font-weight: 900;
+    color: black;
+  }
+
+  @media only screen and (max-width:790px) {
+    .lead {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .member {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .busi {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .prop {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .avio {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media only screen and (min-width: 791px) and (max-width:1050px) {
+    .busi {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .avio {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  #space {
+    height: 70px;
+  }
+
+  .navigation ul li a i {
+    font-size: 28px;
+  }
+
+  #utkarsh img {
+    width: 100%;
+    height: 140%;
+  }
+
+  #kk img {
+    width: 100%;
+    height: 100%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
+    overflow: visible;
+  }
+
+  .scene {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .scene i {
+    position: absolute;
+    top: -250px;
+    background: rgb(70, 65, 65);
+    animation: animatestars linear infinite;
+  }
+
+  @keyframes animatestars {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+
+  .scene .rocket {
+    /* position: relative; */
+    animation: animate 0.2s ease infinite;
+    /* margin-right: 400px; */
+
+
+
+  }
+
+  .rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 40vw;
+    overflow: hidden;
+
+  }
+
+  .rocket img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 90%;
+  }
+
+
+
+
+  @keyframes animate {
+
+    0%,
+    100% {
+      transform: translateY(-2px);
+    }
+
+    50% {
+      transform: translateY(2px);
+    }
+  }
+
+
+
+  .disappear {
+    animation: vanish 2s forwards;
+
+  }
+
+  @keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+      margin-bottom: 100%;
+      display: none;
+    }
+  }
+  @media screen and (max-width: 700px){
+      
+  
+  
+  
+      #fa-fa{
+          
+          transform: translateY(-10px);
+        
+      }
+  
+    
+    
+  }
+</style>
+
+<body>
+  <div class="higher">
+
+    <div>
+      <div class="navigation">
+        <div class="logo"><img src="rtlogo1.png" width=100px height=auto></div>
+        <ul>
+          <li class="menu10">
+            <a href="index.html">Home </a>
+          </li>
+          <li class="dropdown menu10">
+            <a class="dropbtn" href="#">TEAM</a>
+
+            <div class="dropdown-content">
+              <a href="#prop" class="iteml">PROPULSION &nbsp; &nbsp; <i class="fa-solid fa-wind fa-lg"></i></a>
+              <a href="#avio" class="iteml">AVIONICS &nbsp; &nbsp; <i class="fa-solid fa-screwdriver-wrench"></i></a>
+              <a href="#reco" class="iteml">RECOVERY &nbsp; &nbsp; <i class="fa-solid fa-parachute-box"></i></a>
+              <a href="#airf" class="iteml">AIRFRAME &nbsp; &nbsp; <i class="fa-solid fa-rocket"></i></a>
+              <!-- <a href="#payl">Payload</a> -->
+              <a href="#busi" class="iteml">BUSINESS &nbsp; &nbsp; <i class="fa-solid fa-handshake"></i></a>
+            </div>
+          </li>
+          <li class="menu10"><a href="gallery.html">Gallery</a></li>
+          <li class="menu10"><a href="trial.html">Subsystems</a></li>
+          <li class="menu10"><a href="faq.html">FAQs</a></li>
+          <li class="menu10"><a href="contact.html">CONTACT US</a></li>
+
+          <li id="fa-fa">
+            <a href="#" class="menu2"><i class="fa fa-bars"></i></a>
+            <div class="menu1">
+                <a href="index.html">HOME</a>
+                <a href="Untitled-1.html">TEAM</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="trial.html">SUBSYSTEMS</a>
+                <a href="faq.html">FAQs</a>
+                <a href="contact.html">CONTACT-US</a>
+            </div>
+        </li>
+
+        </ul>
+
+
+      </div>
+    </div>
+    <div class="top">
+      <div class="intro" data-aos="flip-down">THE TEAM</div>
+      <br>
+      <div class="about" data-aos="flip-up" data-aos-duration="2500">With a strength of 30 + students <span
+          id="rocketb">IITB ROCKET TEAM</span> is building it's
+        first solid propellant rocket <span id="rocketb">ADYANT</span> which
+        will have a targeted apogee of 10,000 feet aiming to participate in next edition of <span id="rocketb"><a
+            href="https://spaceportamericacup.com/" target="_blank">SA CUP</a></span></div>
+    </div>
+    <div class="members">
+      <div class="oc">
+        <div data-aos="zoom-in">
+          <h1>TEAM LEADS</h1>
+          <hr>
+        </div>
+        <div class="lead">
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-right"><img src="Profile Picture - Vishal Srivastava.jpeg" alt="error"></div>
+
+            <p>Vishal Srivastava <a href="https://www.linkedin.com/in/vishal-srivastava-iitb/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-left"><img src="Abhinav_Damor.jpeg" alt="error"></div>
+
+            <p>Abhinav Damor <a href="https://www.linkedin.com/in/abhinavdamor/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+
+      </div>
+      <div class="propulsion" id="prop">
+        <div id="space"></div>
+        <div data-aos="zoom-in">
+          <h1>PROPULSION</h1>
+          <hr>
+        </div>
+        <div class="lead">
+          <div>
+            <p>LEAD</p>
+            <div id="utkarsh" data-aos="slide-right"><img src="me - Utkarsh Dev.jpeg" alt="error"></div>
+
+            <p>Utkarsh Dev <a href="https://www.linkedin.com/in/utkarsh-dev-a290b9210/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <p>LEAD</p>
+            <div data-aos="slide-left"><img src="IMG_20221004_232840 - Rajeev Dhurandhar.jpg" alt="error"></div>
+            <p>Rajeev Dhurandhar <a href="https://www.linkedin.com/in/rajeev-dhurandhar-88230b212/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+
+          </div>
+        </div>
+        <div class="member prop">
+
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="WhatsApp Image 2022-10-06 at 20.17.04 - Nistha Agarwal.jpeg"
+                alt="error"></div>
+            <p>Nistha Agarwal <a href="https://www.linkedin.com/in/nistha-agarwal-9b6b7a223/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-down"><img src="IMG-20210816-WA0002 - Sayan Vishwakarma.jpg" alt="error"></div>
+            <p>Sayan Vishwakarma <a href="#"><i class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="1644664510932 - Amrale Rutuja Shashikant.jpg" alt="error"></div>
+            <p>Rutuja Amrale <a href="http://www.linkedin.com/in/rutuja-amrale" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="1v1 Aspect Ratio - Talatiya Hardev.jpg" alt="error"></div>
+            <p>Hardev Talatiya <a href="https://www.linkedin.com/in/talatiya-hardev-310a7a131" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div id="lagnesh" data-aos="slide-up"><img src="lagnesh-1.jpg" alt="error"></div>
+            <p>Lagnesh Mahapatra <a href="https://www.linkedin.com/in/lagnesh-mahapatra-135503249" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="tanyut - Tanyut Sharma.jpg" alt="error"></div>
+            <p>Tanyut Sharma <a href="https://www.linkedin.com/in/tanyut/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="avionics" id="avio">
+        <div id="space"></div>
+
+        <div data-aos="zoom-in">
+          <h1>AVIONICS</h1>
+          <hr>
+        </div>
+        <div class="lead">
+          <div>
+            <p>POC</p>
+            <div data-aos="slide-down"><img src="IMG_20201008_142355__01_2 - Shobhit Maheshwari.jpg" alt="error"></div>
+
+            <p>Shobhit Maheshwari <a href="https://www.linkedin.com/in/shobhit-maheshwari-7800021ba/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+        <div class="member avio">
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-right"><img src="20211107_222040 - Shinde Sanjana Anil.jpg" alt="error"></div>
+
+            <p>Shinde Sanjana Anil <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-right"><img src="me - Sajal Sachin Deolikar.jpeg" alt="error"></div>
+
+            <p>Sajal Deolikar <a href="https://www.linkedin.com/in/sajal-deolikar-15a24a235/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-left"><img src="riddhi.jpg" alt="error"></div>
+
+            <p>Riddhi Agarwal <a href="https://instagram.com/definitelynotriddhi?igshid=YmMyMTA2M2Y=" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="my - Akshay Gajanan Gaikwad.jpg" alt="error"></div>
+            <p>Akshay Gajanan Gaikwad <a href="https://www.instagram.com/_aksh.ai/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+
+          </div>
+
+        </div>
+        <div class="member">
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div id="kk" data-aos="slide-right"><img src="kk.jpg" alt="error"></div>
+            <p>Kunal Kumar <a href="https://www.linkedin.com/in/kunal-kumar-a7367417a/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-up"><img src="pic4upload - Kartik Singhal.jpg" alt="error"></div>
+            <p>Kartik Singhal <a href="https://www.linkedin.com/in/kartik-singhal-941aab173/" target="_blank"></a><i
+                class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>POC</p> -->
+            <div data-aos="slide-left"><img src="WhatsApp Image 2021-06-10 at 17.11.02 - Nishant Mittal.jpeg"
+                alt="error"></div>
+
+            <p>Nishant Mittal <a href="https://www.linkedin.com/in/nishant-mittal-2001" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="recovery" id="reco">
+        <div id="space"></div>
+
+        <div data-aos="zoom-in">
+          <h1>RECOVERY</h1>
+          <hr>
+        </div>
+        <div class="lead">
+          <div>
+            <p>LEAD</p>
+            <div data-aos="slide-down"><img src="IMG-20210712-WA0060 - Bhavana Parankusam.jpg" alt="error"></div>
+
+            <p>Bhavana Parankusam <a href="https://www.linkedin.com/in/bhavana-p-9b8674215/" target="_blank"></a><i
+                class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+        <div class="member">
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="IMG-20221004-WA0012 - Arnav Jaideep Kalgutkar.jpg" alt="error"></div>
+            <p>Arnav Jaideep Kalgutkar <a href="#"><i class="fa-brands fa-linkedin"></i></a></p>
+
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="IMG-20220722-WA0004 - Anoushka Dey.jpg" alt="error"></div>
+            <p>Anoushka Dey <a href="https://www.linkedin.com/in/anoushka-dey-549363234/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+
+      </div>
+      <div class="airframe" id="airf">
+        <div id="space"></div>
+
+        <div data-aos="zoom-in">
+          <h1>AIRFRAME</h1>
+          <hr>
+        </div>
+        <div class="lead">
+          <div>
+            <p>LEAD</p>
+            <div data-aos="slide-down"><img src="Khuloudoh Maikho at R city - Khuloudoh Maikho.jpg" alt="error"></div>
+
+            <p>Khuloudoh Maikho <a href="https://www.linkedin.com/in/khuloudoh-maikho-52a1831b9/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+        <div class="member busi">
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-right"><img src="IITB RT - Modi Hitaishi Dharmeshbhai.jpg" alt="error"></div>
+
+            <p>Hitaishi Modi <a
+                href="https://www.linkedin.com/in/hitaishi-modi-134413210?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByvYDoo%2BxSOyjOpf9VN9CMA%3D%3D"
+                target="_blank" <i class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>LEAD</p> -->
+            <div data-aos="slide-right"><img src="IMG20200913162124_2 - Varun Karthik Makineni.jpg" alt="error"></div>
+
+            <p>Varun Karthik Makineni <a href="http://www.linkedin.com/in/varunkarthikmakineni" target="_blank" <i
+                class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="171686D5-5199-4290-844E-2F77BA8F7A4E - Aditya Gupta.jpeg" alt="error">
+            </div>
+            <p>Aditya Gupta <a href="https://www.linkedin.com/in/aditya-gupta-332706221/" target="_blank"></a><i
+                class="fa-brands fa-linkedin"></i></a></p>
+
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="Vignesh_Anand.jpg" alt="error"></div>
+            <p>Vignesh Anand <a href="https://www.linkedin.com/in/vignesh-anand-iitb/" target="_blank"></a><i
+                class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="business" id="busi">
+        <div id="space"></div>
+
+        <div data-aos="zoom-in">
+          <h1>BUSINESS</h1>
+          <hr>
+        </div>
+        <div class="lead">
+          <div>
+            <p>LEAD</p>
+            <div data-aos="slide-right"><img src="divyanshu.jpg" alt="error"></div>
+
+            <p>Divyanshu Meena <a href="https://www.linkedin.com/in/divyanshu-meena-285b8123a/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <p>LEAD</p>
+            <div data-aos="slide-down"><img src="harshit.jpg" alt="error"></div>
+
+            <p>Harshit Dandelia <a href="https://www.linkedin.com/in/harshit-dandelia-2420b5203/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <p>LEAD</p>
+            <div data-aos="slide-left"><img src="anuj.jpg" alt="error"></div>
+
+            <p>Anuj Bhawsar <a href="https://www.linkedin.com/in/anuj-bhawsar-93a609201/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+        </div>
+        <div class="member busi">
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="IMG_20221004_191936 - Kunal Purohit.jpg" alt="error"></div>
+            <p>Kunal Purohit <a href="https://www.linkedin.com/in/kunal-purohit-2730831a9/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+
+          </div>
+
+
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="20221005_225622 - Simranjeet Kaur.jpg" alt="error"></div>
+            <p>Simranjeet Kaur <a href="https://www.linkedin.com/in/simranjeet-kaur-730628223/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="Snapchat-1804057184__01 - Darshan Satyam Bitla.jpg" alt="error"></div>
+            <p>Darshan Bitla <a href="https://www.linkedin.com/in/darshan-bitla-1aaa68224" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="makeh.jpeg" alt="error"></div>
+            <p>Mehak Maheshwari <a href="https://www.linkedin.com/in/mahek-maheshwari-a4b323226/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="IMG_20221005_195606 - Riya Singh.jpg" alt="error"></div>
+            <p>Riya Singh <a href="https://www.linkedin.com/in/riya-singh-044560228/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-right"><img src="1664895806597 - Chiging Chilyang.jpg" alt="error"></div>
+            <p>Chiging Chilyang <a href="https://www.linkedin.com/in/chiging-chilyang-156534223/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img
+                src="Screenshot_2022-10-03-00-11-50-40_254de13a4bc8758c9908fff1f73e3725__01 - Priyanshi Garg.jpg"
+                alt="error"></div>
+            <p>Priyanshi Garg <a href="https://www.linkedin.com/in/priyanshi-garg-a15813226/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+          <div>
+            <!-- <p>MEMBER</p> -->
+            <div data-aos="slide-left"><img src="IMG_20221006_001944 - Nagar Jayant Deepchand.jpg" alt="error"></div>
+            <p>Jayant Nagar <a href="https://www.linkedin.com/in/jayant-nagar-b6b550227/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a></p>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>ADDRESS</h4>
+          <p>IITB Rocket Team Lab, Basement, Aero Annex Building, Academic Area, IIT Bombay, Powai, Mumbai, 400076</p>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SUBSYSTEMS</h4>
+          <ul>
+            <li><a href="#prop">PROPULSION</a></li>
+            <li><a href="#avio">AVIONICS</a></li>
+            <li><a href="#reco">RECOVERY</a></li>
+            <li><a href="#airf">AIRFRAME</a></li>
+            <li><a href="#busi">BUSINESS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>FOLLOW US</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/iitbrocketteam" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
+            <a href="https://www.instagram.com/iitb.rocket.team/?hl=en" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/iitb-rocket-team/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:iitbrocketteam@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="CopyRightText">
+    <p>&copy; IITB Rocket Web Team 2022</p>
+  </div>
+
+  <div class="scene">
+    <!-- <div class="rocket">
+      <img src="rocketloader2.png" alt="error loading image">
+  </div> -->
+  </div>
+  <script>
+    function stars() {
+      let count = 100;
+      let scene = document.querySelector('.scene');
+      let i = 0;
+      while (i < count) {
+        let star = document.createElement('i');
+        let x = Math.floor(Math.random() * window.innerWidth);
+        let duration = Math.random() * 1;
+        let h = Math.random() * 50;
+        star.style.left = x + 'px';
+        star.style.width = 1 + 'px';
+        star.style.height = h + 'px';
+        star.style.width = 2 + 'px';
+        star.style.animationDuration = duration + 's';
+
+        scene.appendChild(star);
+        i++
+      }
+    }
+    stars();
+
+
+  </script>
+  <script>
+    var loader = document.querySelector(".scene")
+    var rocket = document.querySelector(".rocket")
+    var body = document.querySelector("body")
+    var saale = document.querySelector(".saale")
+
+
+
+    window.addEventListener("load", vanish);
+    function vanish() {
+      loader.classList.add("disappear");
+      body.style.overflow = "visible";
+      body.style.display = "block";
+      saale.style.display = "block";
+      body.style.minHeight = "none";
+      body.style.lineHeight = "1.5";
+      body.style.overflowX = "hidden";
+
+
+    }
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
